@@ -75,3 +75,7 @@ Browser verification of the signed-in ANIMAL dashboard showed the 2023 Hindi fil
 ## Full assignment audit
 
 See ASSIGNMENT_AUDIT.md for the full requirements matrix and current results. Re-ran 55 unit tests, 18 integration checks, build, clean source-only install/build, dependency audit, client-secret scan, browser onboarding/edit/logout/returning Google login, and desktop/mobile checks. GitHub publication remains missing; intentional duplicate-output and legacy-fact eligibility exceptions are documented.
+
+## GitHub publication
+
+Source pushed to https://github.com/Bharath250203/movie-memory on branch main. This supersedes earlier notes about the missing GitHub deliverable. Private environment files, database files, dependencies, and generated build output are excluded. Greenhouse submission has not been performed.

@@ -4,7 +4,7 @@ Audit date: November 9, 2026 (America/Los_Angeles). Scope: the supplied seven-pa
 
 ## Verdict
 
-The required stack, base user flows, and core Variant A behavior are implemented and passed the checks below. **The submission package is not fully complete: the required GitHub repository has not been published or connected.** A ZIP is useful but does not replace that deliverable.
+The required stack, base user flows, and core Variant A behavior are implemented and passed the checks below. **Publication follow-up:** the required GitHub repository is now available at https://github.com/Bharath250203/movie-memory. This resolves the repository gap recorded during the original audit. No Greenhouse submission has been made.
 
 Two intentional additions qualify a literal reading of Variant A: repeated generated text is not inserted again, and legacy unsourced facts are excluded from fallback. These choices preserve the accuracy/repetition improvements requested during development. They are documented, not hidden, and should be explained in review. No requirement demands an automatic refresh timer, a particular theme, deployment, or implementing both variants.
 
@@ -37,7 +37,7 @@ Two intentional additions qualify a literal reading of Variant A: repeated gener
 | No secrets in client | Pass for checks performed | Server-only API/database modules; exact configured secret values absent from 26 built client assets. Source archive excludes private environment/database files. This is not a full penetration test. |
 | Handle missing Google photo/name | Pass | Missing name plus broken HTTPS image fell back to Movie lover / initial in current browser audit. |
 | Choose one variant, explain why | Pass | README explicitly selects Variant A and explains backend ownership/cache/concurrency motivation. Full Variant B is not required. |
-| GitHub repository | **Missing** | No configured Git remote or published repository in this project. |
+| GitHub repository | Pass (publication follow-up) | https://github.com/Bharath250203/movie-memory; source pushed to main. |
 | README setup/environment/migrations | Pass | Instructions and .env.example present; clean install/setup/build validated without copying real credentials. |
 | Architecture overview (1–2 pages) | Present | About 898 words in the architecture section; Markdown pagination is renderer-dependent. |
 | Tradeoffs and two-more-hours improvements | Pass | README covers process-local lock, source lookup, data choices, future distributed guard, and other next work. |
@@ -60,10 +60,10 @@ Two intentional additions qualify a literal reading of Variant A: repeated gener
 
 ## Important limitations and submission advice
 
-1. Publish the reviewed source to a GitHub repository and provide that URL. No publication or Greenhouse submission was performed by this audit.
+1. Share the GitHub URL above with the reviewer. Publication was completed after the audit; Greenhouse submission remains separate.
 2. Preserve the README's single-process concurrency limitation. Multiple workers/serverless instances would need a database/shared lock.
 3. State the duplicate-output exception clearly: the app still requests generation after expiry, but refuses to pretend a duplicate is a new discovery. If the evaluator interprets “store it” literally for every successful expired request, this is a deliberate extension to discuss.
 4. External-source lookup and movie editing are optional additions. They increase cost/complexity and are not evidence that full Variant B is complete. The PDF prioritizes clarity and correctness over feature volume; further feature expansion is unnecessary.
 5. Source citations are not a guarantee of truth or novelty. Normalized-text detection does not catch every semantic paraphrase. Testing a few movie titles is not exhaustive model evaluation.
 6. OAuth is in testing mode. A reviewer needs their own documented OAuth configuration or an approved test account. Deployment is not required by the PDF and was not tested.
-7. The ZIP and local app are ready for review, but a complete submission still needs the GitHub deliverable. An optional walkthrough would help explain the schema, cache boundary, lock, and failure cases.
+7. The repository, ZIP, and local app are ready for review. An optional walkthrough would help explain the schema, cache boundary, lock, and failure cases.

@@ -1,5 +1,7 @@
 # Movie Memory
 
+Repository: https://github.com/Bharath250203/movie-memory
+
 A small full-stack app for keeping a favorite movie and discovering a fun fact about it. Built for the Scowtt take-home exercise.
 
 **Implemented: base + Variant A (Backend-Focused: Caching & Correctness).** Chosen to demonstrate user-scoped data ownership, precise cache expiry, concurrent-request handling, and graceful provider failures.
